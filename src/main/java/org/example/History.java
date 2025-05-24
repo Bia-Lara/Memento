@@ -16,10 +16,10 @@ public class History {
     }
 
     public void undoTransference(BankAccount account) {
-        if(history.isEmpty()) System.out.println("não há estado anterior");
+        if(history.size() <= 1) System.out.println("não há estado anterior");
         else{
             IMemento previousState = history.pop();
-            account.returnState(previousState.getBalance(), previousState.getActive());
+            account.backState(previousState);
         }
     }
 }

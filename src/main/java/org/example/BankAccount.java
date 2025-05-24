@@ -28,9 +28,9 @@ public class BankAccount {
         return new AccountMemento(balance, active);
     }
 
-    public void returnState(double balance, boolean active) {
-        this.balance = balance;
-        this.active = active;
+    public void backState(IMemento memento) {
+        this.balance = memento.getBalance();
+        this.active = memento.getActive();
     }
 }
 
