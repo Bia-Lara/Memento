@@ -1,6 +1,6 @@
 package org.example;
 
-public class BankAccount {
+public class BankAccount implements IBankAccount {
     public double balance;
     public boolean active;
 
