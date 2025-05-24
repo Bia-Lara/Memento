@@ -18,7 +18,8 @@ public class History {
     public void undoTransference(IBankAccount account) {
         if(history.size() <= 1) System.out.println("não há estado anterior");
         else{
-            IMemento previousState = history.pop();
+            history.pop();
+            IMemento previousState = history.getLast();
             account.backState(previousState);
         }
     }

@@ -32,5 +32,10 @@ public class BankAccount implements IBankAccount {
         this.balance = memento.getBalance();
         this.active = memento.getActive();
     }
+
+    @Override
+    public String toString() {
+        return String.format("Balance: %f | Active: %b", balance, active);
+    }
 }
 
