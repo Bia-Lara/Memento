@@ -1,8 +1,8 @@
 package org.example;
 
 public class BankAccount implements IBankAccount {
-    public double balance;
-    public boolean active;
+    private double balance;
+    private boolean active;
 
     public BankAccount() {
         active = true;
